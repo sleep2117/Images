@@ -1,0 +1,96 @@
+<svg width="840" height="480" xmlns="http://www.w3.org/2000/svg" style="background-color: #FFFFFF;">
+  <!-- Title & Caption -->
+  <text x="40" y="40" font-family="NanumGothic, sans-serif" font-size="20" fill="#000000" font-weight="bold">Platts MOC(Market on Close) 윈도우 작동 메커니즘</text>
+  <text x="40" y="62" font-family="NanumGothic, sans-serif" font-size="13" fill="#727171">하루 전체 평균이 아닌, 거래소 마감 전 짧은 창구(Window)에 집중된 호가·체결의 수렴점을 그날의 기준가로 선언</text>
+
+  <!-- Legend -->
+  <g transform="translate(580, 20)">
+    <line x1="0" y1="10" x2="20" y2="10" stroke="#727171" stroke-width="2" stroke-dasharray="4,2"/>
+    <text x="25" y="14" font-family="NanumGothic, sans-serif" font-size="11" fill="#727171">매도 호가</text>
+    
+    <line x1="80" y1="10" x2="100" y2="10" stroke="#BC9D7E" stroke-width="2" stroke-dasharray="4,2"/>
+    <text x="105" y="14" font-family="NanumGothic, sans-serif" font-size="11" fill="#8B6D4E">매수 호가</text>
+
+    <line x1="160" y1="10" x2="180" y2="10" stroke="#011E51" stroke-width="2.5"/>
+    <circle cx="170" cy="10" r="3" fill="#011E51"/>
+    <text x="185" y="14" font-family="NanumGothic, sans-serif" font-size="11" fill="#011E51">실제 체결</text>
+  </g>
+
+  <!-- MOC Window Box -->
+  <rect x="400" y="80" width="250" height="220" fill="#F2E9DA" opacity="0.6"/>
+  
+  <rect x="475" y="80" width="100" height="22" fill="#011E51" rx="4"/>
+  <text x="525" y="95" font-family="NanumGothic, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle" font-weight="bold">MOC 윈도우</text>
+
+  <!-- Line Dividers for Time -->
+  <line x1="400" y1="80" x2="400" y2="300" stroke="#011E51" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="650" y1="80" x2="650" y2="300" stroke="#F21B2D" stroke-width="1.5" stroke-dasharray="2,2"/>
+
+  <!-- Sparse Background Trades (Zone 1) -->
+  <g fill="#BC9D7E" opacity="0.5">
+    <path d="M 80 180 L 130 220 L 180 160 L 250 200 L 320 230 L 400 170" stroke="#BC9D7E" stroke-width="1.2" fill="none"/>
+    <circle cx="80" cy="180" r="4"/>
+    <circle cx="130" cy="220" r="3"/>
+    <circle cx="180" cy="160" r="4"/>
+    <circle cx="250" cy="200" r="5"/>
+    <circle cx="320" cy="230" r="3"/>
+    <circle cx="400" cy="170" r="4"/>
+  </g>
+  <text x="240" y="125" font-family="NanumGothic, sans-serif" font-size="12" fill="#727171" text-anchor="middle" font-weight="bold">장중의 흩어진 실거래 (OTC 등)</text>
+  <text x="240" y="142" font-family="NanumGothic, sans-serif" font-size="11" fill="#727171" text-anchor="middle">(파편화되어 글로벌 단일 지표로 쓰기 어려움)</text>
+
+  <!-- MOC Window Flow (Zone 2) -->
+  <path d="M 400 110 Q 550 110 650 190" stroke="#727171" stroke-width="2" stroke-dasharray="4,2" fill="none"/>
+  <text x="410" y="125" font-family="NanumGothic, sans-serif" font-size="11" fill="#727171" font-weight="bold">매도 시초가 (셀러 호가 하향)</text>
+  
+  <path d="M 400 270 Q 550 270 650 190" stroke="#BC9D7E" stroke-width="2" stroke-dasharray="4,2" fill="none"/>
+  <text x="410" y="260" font-family="NanumGothic, sans-serif" font-size="11" fill="#8B6D4E" font-weight="bold">매수 시초가 (바이어 호가 상향)</text>
+
+  <path d="M 400 170 L 430 190 L 460 160 L 490 195 L 520 175 L 550 185 L 580 170 L 610 190 L 650 190" stroke="#011E51" stroke-width="2.5" fill="none"/>
+  <circle cx="430" cy="190" r="3.5" fill="#011E51"/>
+  <circle cx="460" cy="160" r="3.5" fill="#011E51"/>
+  <circle cx="490" cy="195" r="3.5" fill="#011E51"/>
+  <circle cx="520" cy="175" r="3.5" fill="#011E51"/>
+  <circle cx="550" cy="185" r="3.5" fill="#011E51"/>
+  <circle cx="580" cy="170" r="3.5" fill="#011E51"/>
+  <circle cx="610" cy="190" r="3.5" fill="#011E51"/>
+  <!-- Moved text to clear empty space -->
+  <text x="525" y="235" font-family="NanumGothic, sans-serif" font-size="11" fill="#011E51" font-weight="bold" text-anchor="middle">체결 지점의 수렴 (Convergence)</text>
+
+  <!-- Final Assess Dot -->
+  <circle cx="650" cy="190" r="7" fill="#F21B2D" stroke="#FFFFFF" stroke-width="2"/>
+  <!-- Added clear space on the right for this text by shifting Zone 3 -->
+  <text x="665" y="186" font-family="NanumGothic, sans-serif" font-size="14" fill="#F21B2D" font-weight="bold">기준가격 공식 선언</text>
+  <text x="665" y="202" font-family="NanumGothic, sans-serif" font-size="11" fill="#F21B2D">(최종 평가 스탬프)</text>
+
+  <!-- Sparse Background Trades (Zone 3) -->
+  <g fill="#BC9D7E" opacity="0.5">
+    <!-- Moved these up to avoid the Final Assess Dot text -->
+    <path d="M 660 130 L 700 110 L 750 140" stroke="#BC9D7E" stroke-width="1.2" fill="none"/>
+    <circle cx="700" cy="110" r="4"/>
+    <circle cx="750" cy="140" r="5"/>
+  </g>
+
+  <!-- X Axis Timeline Base -->
+  <line x1="80" y1="300" x2="800" y2="300" stroke="#727171" stroke-width="2"/>
+  <g font-family="NanumGothic, sans-serif" font-size="13" fill="#727171">
+    <text x="80" y="325" text-anchor="start">00:00 (전일 마감 직후)</text>
+    <text x="400" y="325" text-anchor="middle" font-weight="bold" fill="#011E51">16:00 윈도우 오픈</text>
+    <text x="650" y="325" text-anchor="middle" font-weight="bold" fill="#F21B2D">16:30 가격 평가 종가점</text>
+    <text x="800" y="325" text-anchor="end">24:00 (당일 종료)</text>
+  </g>
+
+  <!-- Representativeness Bottom Chart -->
+  <text x="80" y="375" font-family="NanumGothic, sans-serif" font-size="13" fill="#000000" font-weight="bold">↓ 지수 대표성(Representativeness) 취약성 논쟁점</text>
+  <!-- Extended width to perfectly align with timeline -->
+  <rect x="80" y="390" width="720" height="20" rx="4" fill="#EFEFEF"/>
+  <rect x="80" y="390" width="20" height="20" rx="4" fill="#F21B2D"/>
+  
+  <!-- Removed diagonal lines that were cutting through the timeline text -->
+  <text x="80" y="430" font-family="NanumGothic, sans-serif" font-size="12" fill="#F21B2D" font-weight="bold">윈도우 안으로 집계된 거래 누적 비중: 단 약 2.31%</text>
+  <text x="360" y="430" font-family="NanumGothic, sans-serif" font-size="12" fill="#727171">(2007년 WTI 실거래 기준, 하루 24시간 전체 거래량 100% 대비)</text>
+
+  <!-- Footer -->
+  <text x="800" y="465" font-family="NanumGothic, sans-serif" font-size="12" fill="#727171" text-anchor="end">자료: 코리아PDS 자체 재구성 (논쟁점 데이터: Fattouh 2011)</text>
+
+</svg>
