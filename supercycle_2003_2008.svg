@@ -1,0 +1,89 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg" style="background-color: #FFFFFF;">
+  <!-- Title -->
+  <text x="60" y="50" font-family="NanumGothic, sans-serif" font-size="20" fill="#000000" font-weight="bold">2003~2008 슈퍼사이클: 펀더멘털 작동 메커니즘 흐름도</text>
+
+  <!-- Block 1: 수요 폭발 -->
+  <g transform="translate(60, 90)">
+    <rect width="200" height="220" rx="8" fill="#FFFFFF" stroke="#F21B2D" stroke-width="2"/>
+    <rect width="200" height="40" rx="8" fill="#F21B2D"/>
+    <rect y="20" width="200" height="20" fill="#F21B2D"/>
+    <text x="100" y="26" font-family="NanumGothic, sans-serif" font-size="15" fill="#FFFFFF" text-anchor="middle" font-weight="bold">01. 글로벌 수요 폭발</text>
+    
+    <!-- Mini Graphic 1 -->
+    <rect x="50" y="110" width="20" height="30" fill="#BC9D7E" rx="2"/>
+    <rect x="80" y="90" width="20" height="50" fill="#F21B2D" opacity="0.6" rx="2"/>
+    <rect x="110" y="70" width="20" height="70" fill="#F21B2D" opacity="0.8" rx="2"/>
+    <rect x="140" y="50" width="20" height="90" fill="#F21B2D" rx="2"/>
+    <path d="M 60 100 L 90 80 L 120 60 L 150 40" fill="none" stroke="#011E51" stroke-width="2" stroke-dasharray="4,3"/>
+
+    <!-- Texts -->
+    <text x="100" y="185" font-family="NanumGothic, sans-serif" font-size="14" fill="#000000" text-anchor="middle" font-weight="bold">신흥국 경제 고도 성장</text>
+    <text x="100" y="205" font-family="NanumGothic, sans-serif" font-size="13" fill="#727171" text-anchor="middle">중국발 원자재 블랙홀 현상</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <g transform="translate(265, 190)">
+    <polygon points="0,6 20,6 20,0 30,10 20,20 20,14 0,14" fill="#BC9D7E" />
+  </g>
+
+  <!-- Block 2: 쿠션 소진 -->
+  <g transform="translate(300, 90)">
+    <rect width="200" height="220" rx="8" fill="#FFFFFF" stroke="#011E51" stroke-width="2"/>
+    <rect width="200" height="40" rx="8" fill="#011E51"/>
+    <rect y="20" width="200" height="20" fill="#011E51"/>
+    <text x="100" y="26" font-family="NanumGothic, sans-serif" font-size="15" fill="#FFFFFF" text-anchor="middle" font-weight="bold">02. 완충 쿠션 소진</text>
+    
+    <!-- Mini Graphic 2 -->
+    <!-- Full capability -->
+    <rect x="55" y="60" width="35" height="70" fill="none" stroke="#727171" stroke-width="2" rx="3"/>
+    <rect x="58" y="63" width="29" height="64" fill="#BC9D7E" rx="2"/>
+    <text x="72" y="150" font-family="NanumGothic, sans-serif" font-size="11" fill="#727171" text-anchor="middle">2003년 하반기</text>
+
+    <!-- Arrow inside graphic -->
+    <path d="M 98 95 L 112 95 M 107 90 L 112 95 L 107 100" fill="none" stroke="#011E51" stroke-width="2"/>
+
+    <!-- Diminished capacity -->
+    <rect x="120" y="60" width="35" height="70" fill="none" stroke="#011E51" stroke-width="2" rx="3"/>
+    <rect x="123" y="105" width="29" height="22" fill="#011E51" rx="2"/>
+    <text x="137" y="150" font-family="NanumGothic, sans-serif" font-size="11" fill="#011E51" text-anchor="middle" font-weight="bold">2004년 상반기</text>
+    <text x="137" y="52" font-family="NanumGothic, sans-serif" font-size="11" fill="#F21B2D" text-anchor="middle" font-weight="bold">↓ 고갈 임박</text>
+
+    <!-- Texts -->
+    <text x="100" y="185" font-family="NanumGothic, sans-serif" font-size="14" fill="#000000" text-anchor="middle" font-weight="bold">OPEC 잉여 능력 바닥</text>
+    <text x="100" y="205" font-family="NanumGothic, sans-serif" font-size="13" fill="#727171" text-anchor="middle">유가 상승 제어 장치 상실</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <g transform="translate(505, 190)">
+    <polygon points="0,6 20,6 20,0 30,10 20,20 20,14 0,14" fill="#BC9D7E" />
+  </g>
+
+  <!-- Block 3: 가격 폭주와 붕괴 -->
+  <g transform="translate(540, 90)">
+    <rect width="200" height="220" rx="8" fill="#FFFFFF" stroke="#727171" stroke-width="2"/>
+    <rect width="200" height="40" rx="8" fill="#727171"/>
+    <rect y="20" width="200" height="20" fill="#727171"/>
+    <text x="100" y="26" font-family="NanumGothic, sans-serif" font-size="15" fill="#FFFFFF" text-anchor="middle" font-weight="bold">03. 가격 폭주와 붕괴</text>
+    
+    <!-- Mini Graphic 3 -->
+    <line x1="20" y1="130" x2="180" y2="130" stroke="#727171" stroke-width="1" stroke-dasharray="2,2"/>
+    <path d="M 25 130 C 50 130, 70 120, 100 50 L 150 140" fill="none" stroke="#F21B2D" stroke-width="4" stroke-linejoin="round"/>
+    
+    <circle cx="100" cy="50" r="5" fill="#F21B2D"/>
+    <text x="100" y="40" font-family="NanumGothic, sans-serif" font-size="12" fill="#F21B2D" text-anchor="middle" font-weight="bold">$147.27 ('08.07)</text>
+
+    <circle cx="150" cy="140" r="5" fill="#011E51"/>
+    <text x="150" y="156" font-family="NanumGothic, sans-serif" font-size="12" fill="#011E51" text-anchor="middle" font-weight="bold">$33.00 ('08.12)</text>
+
+    <!-- Texts -->
+    <text x="100" y="185" font-family="NanumGothic, sans-serif" font-size="14" fill="#000000" text-anchor="middle" font-weight="bold">슈퍼 스파이크 발생</text>
+    <text x="100" y="205" font-family="NanumGothic, sans-serif" font-size="13" fill="#727171" text-anchor="middle">투기 쏠림 후 금융위기 폭락</text>
+  </g>
+
+  <!-- Narrative Summary Bar -->
+  <rect x="60" y="330" width="680" height="35" rx="6" fill="#F2E9DA" opacity="0.7"/>
+  <text x="400" y="353" font-family="NanumGothic, sans-serif" font-size="16" fill="#011E51" text-anchor="middle" font-weight="bold">" 2003~2008 : 수요 증분 폭발 ➔ 여유 쿠션 소진 ➔ 유가 폭주와 폭락 "</text>
+
+  <!-- Footer -->
+  <text x="740" y="390" font-family="NanumGothic, sans-serif" font-size="12" fill="#727171" text-anchor="end">자료: 코리아PDS 자체 재구성 (데이터 부재시 인과관계도 대체)</text>
+</svg>
