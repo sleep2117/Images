@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&amp;display=swap');
+            text { font-family: 'Nanum Gothic', sans-serif; text-anchor: middle; }
+            .title { font-size: 20px; font-weight: bold; fill: #000000; text-anchor: start; }
+            .block-text { font-size: 16px; font-weight: bold; fill: #FFFFFF; }
+            .tick-text { font-size: 10px; fill: #727171; }
+            .label-bold { font-size: 14px; font-weight: bold; fill: #000000; }
+            .bridge-label { font-size: 12px; font-weight: bold; fill: #011E51; }
+            .source { font-size: 12px; fill: #727171; text-anchor: end; }
+            .shadow { filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1)); }
+        </style>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#011E51" />
+        </marker>
+        <marker id="arrowBoth" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#727171" />
+        </marker>
+    </defs>
+    
+    <rect width="100%" height="100%" fill="#FFFFFF" />
+    <text x="40" y="40" class="title">ICE 선물 vs Dated Brent: 시간축 해상도와 연결 계층</text>
+
+    <!-- Top Axis: ICE Futures (Monthly Resolution) -->
+    <text x="100" y="100" class="label-bold" text-anchor="end">ICE Brent 선물 (월물)</text>
+    <rect x="120" y="75" width="200" height="40" rx="4" fill="#011E51" class="shadow" />
+    <text x="220" y="101" class="block-text">June (M1)</text>
+    <rect x="330" y="75" width="200" height="40" rx="4" fill="#5A6D8F" class="shadow" />
+    <text x="430" y="101" class="block-text">July (M2)</text>
+    <rect x="540" y="75" width="200" height="40" rx="4" fill="#9BA7BB" class="shadow" />
+    <text x="640" y="101" class="block-text">August (M3)</text>
+
+    <!-- Bottom Axis: Dated Brent (Daily/Weekly Resolution) -->
+    <text x="100" y="270" class="label-bold" text-anchor="end">Dated Brent (날짜물)</text>
+    <line x1="120" y1="260" x2="740" y2="260" stroke="#727171" stroke-width="4" stroke-dasharray="2,2" />
+    <!-- Ticks representing days -->
+    <path d="M120 255 v10 M140 255 v10 M160 255 v10 M180 255 v10 M200 255 v10 M220 255 v10 M240 255 v10 M260 255 v10 
+             M280 255 v10 M300 255 v10 M320 255 v10 M340 255 v10 M360 255 v10 M380 255 v10 M400 255 v10 M420 255 v10
+             M440 255 v10 M460 255 v10 M480 255 v10 M500 255 v10 M520 255 v10 M540 255 v10 M560 255 v10 M580 255 v10" stroke="#727171" stroke-width="1" />
+    
+    <!-- Window Box -->
+    <rect x="140" y="245" width="160" height="30" fill="#F21B2D" opacity="0.2" rx="4" />
+    <rect x="140" y="245" width="160" height="30" fill="none" stroke="#F21B2D" stroke-width="2" rx="4" />
+    <text x="220" y="295" font-size="12px" font-weight="bold" fill="#F21B2D">10~30일 앞 Laycan 창</text>
+
+    <!-- Center bridges connecting Top and Bottom -->
+    
+    <!-- 1. Cash BFOET -->
+    <rect x="330" y="150" width="100" height="30" rx="15" fill="#FAFAFA" stroke="#BC9D7E" stroke-width="2" class="shadow" />
+    <text x="380" y="170" class="bridge-label">Cash BFOET</text>
+    <line x1="430" y1="115" x2="430" y2="150" stroke="#BC9D7E" stroke-width="2" stroke-dasharray="3,3" />
+    <text x="490" y="145" font-size="11px" fill="#727171">월물 프록시</text>
+
+    <!-- 2. EFP -->
+    <path d="M 220 115 Q 220 165 320 165" fill="none" stroke="#F21B2D" stroke-width="2" marker-end="url(#arrow)" />
+    <rect x="190" y="130" width="80" height="30" fill="#FFFFFF" rx="4" opacity="0.9" />
+    <text x="230" y="144" class="bridge-label" fill="#F21B2D">EFP</text>
+    <text x="230" y="156" font-size="11px" fill="#F21B2D">월물 실물 전환</text>
+
+    <!-- 3. CFD -->
+    <rect x="330" y="200" width="100" height="30" rx="15" fill="#FAFAFA" stroke="#BC9D7E" stroke-width="2" class="shadow" />
+    <text x="380" y="220" class="bridge-label">CFD</text>
+    <line x1="380" y1="180" x2="380" y2="200" stroke="#BC9D7E" stroke-width="2" stroke-dasharray="3,3" />
+    <line x1="380" y1="230" x2="220" y2="245" stroke="#BC9D7E" stroke-width="2" marker-end="url(#arrowBoth)" />
+    <text x="400" y="240" font-size="11px" fill="#727171">주간 해상도</text>
+
+    <!-- 4. DFL -->
+    <path d="M 180 115 L 180 245" fill="none" stroke="#011E51" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrow)" />
+    <rect x="140" y="165" width="80" height="30" fill="#FFFFFF" rx="4" opacity="0.9" />
+    <text x="180" y="179" class="bridge-label">DFL</text>
+    <text x="180" y="191" font-size="11px" fill="#011E51">직접 헤지</text>
+
+    <!-- Bottom Caption -->
+    <rect x="40" y="300" width="720" height="30" rx="6" fill="#F2E9DA" />
+    <text x="400" y="320" font-size="14px" font-weight="bold">ICE 선물은 월 단위 블록으로 움직이지만, Dated Brent는 촘촘한 날짜 단위로 쪼개져 있습니다.</text>
+    
+    <!-- Source -->
+    <text x="760" y="340" class="source">자료: 코리아PDS</text>
+</svg>
