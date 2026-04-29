@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&amp;display=swap');
+            text { font-family: 'Nanum Gothic', sans-serif; text-anchor: middle; }
+            .title { font-size: 20px; font-weight: bold; fill: #000000; text-anchor: start; }
+            .panel-title { font-size: 18px; font-weight: bold; fill: #FFFFFF; }
+            .highlight { font-size: 15px; font-weight: bold; fill: #000000; }
+            .desc { font-size: 13px; fill: #727171; }
+            .barrel-text { font-size: 14px; font-weight: bold; fill: #FFFFFF; }
+            .source { font-size: 12px; fill: #727171; text-anchor: end; }
+            .shadow { filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1)); }
+        </style>
+    </defs>
+    
+    <rect width="100%" height="100%" fill="#FFFFFF" />
+    
+    <!-- Title -->
+    <text x="40" y="40" class="title">북해(North Sea) vs 두바이(Dubai) 결제 단위 및 특성 비교</text>
+
+    <!-- LEFT PANEL: North Sea -->
+    <rect x="40" y="70" width="340" height="300" rx="8" fill="#FAFAFA" stroke="#F21B2D" stroke-width="2" class="shadow" />
+    <path d="M 40 78 Q 40 70 48 70 L 372 70 Q 380 70 380 78 L 380 110 L 40 110 Z" fill="#F21B2D" />
+    <text x="210" y="96" class="panel-title">North Sea (북해)</text>
+    
+    <!-- North Sea Barrel (700k bbl) -->
+    <path d="M 120 160 L 120 280 A 60 15 0 0 0 240 280 L 240 160 Z" fill="#BC9D7E" />
+    <ellipse cx="180" cy="160" rx="60" ry="15" fill="#A88B6F" />
+    <!-- Slices (6 lines for 7 segments) -->
+    <line x1="120" y1="177" x2="240" y2="177" stroke="#FFFFFF" stroke-width="2" />
+    <line x1="120" y1="194" x2="240" y2="194" stroke="#FFFFFF" stroke-width="2" />
+    <line x1="120" y1="211" x2="240" y2="211" stroke="#FFFFFF" stroke-width="2" />
+    <line x1="120" y1="228" x2="240" y2="228" stroke="#FFFFFF" stroke-width="2" />
+    <line x1="120" y1="245" x2="240" y2="245" stroke="#FFFFFF" stroke-width="2" />
+    <line x1="120" y1="262" x2="240" y2="262" stroke="#FFFFFF" stroke-width="2" />
+
+    <rect x="140" y="200" width="80" height="40" rx="4" fill="#BC9D7E" stroke="#A88B6F" stroke-width="1" />
+    <text x="180" y="218" class="barrel-text">700,000</text>
+    <text x="180" y="233" class="barrel-text" font-size="12px">Barrels</text>
+    
+    <!-- Text Labels -->
+    <text x="310" y="180" class="highlight" fill="#F21B2D">Partial</text>
+    <text x="310" y="200" class="highlight">100,000 배럴</text>
+    <text x="310" y="220" class="highlight" fill="#F21B2D">× 7개</text>
+    <line x1="250" y1="210" x2="280" y2="210" stroke="#727171" stroke-width="2" />
+
+    <text x="210" y="325" class="highlight">풀카고 위주 굵은 거래</text>
+    <text x="210" y="345" class="desc">거래 빈도가 낮음 (Quiet Session 잦음)</text>
+
+
+    <!-- RIGHT PANEL: Dubai -->
+    <rect x="420" y="70" width="340" height="300" rx="8" fill="#FAFAFA" stroke="#011E51" stroke-width="2" class="shadow" />
+    <path d="M 420 78 Q 420 70 428 70 L 752 70 Q 760 70 760 78 L 760 110 L 420 110 Z" fill="#011E51" />
+    <text x="590" y="96" class="panel-title">Dubai (두바이)</text>
+    
+    <!-- Dubai Barrel (500k bbl) -->
+    <path d="M 500 180 L 500 280 A 60 15 0 0 0 620 280 L 620 180 Z" fill="#2765FF" />
+    <ellipse cx="560" cy="180" rx="60" ry="15" fill="#1C4EB8" />
+    <!-- Slices -->
+    <line x1="500" y1="185" x2="620" y2="185" stroke="#FFFFFF" stroke-width="1" />
+    <line x1="500" y1="190" x2="620" y2="190" stroke="#FFFFFF" stroke-width="1" />
+    <line x1="500" y1="195" x2="620" y2="195" stroke="#FFFFFF" stroke-width="1" />
+    <line x1="500" y1="200" x2="620" y2="200" stroke="#FFFFFF" stroke-width="1" />
+    <line x1="500" y1="205" x2="620" y2="205" stroke="#FFFFFF" stroke-width="1" />
+    <line x1="500" y1="210" x2="620" y2="210" stroke="#FFFFFF" stroke-width="1" />
+    <line x1="500" y1="215" x2="620" y2="215" stroke="#FFFFFF" stroke-width="1" />
+    <line x1="500" y1="220" x2="620" y2="220" stroke="#FFFFFF" stroke-width="1" />
+    <line x1="500" y1="225" x2="620" y2="225" stroke="#FFFFFF" stroke-width="1" />
+    <line x1="500" y1="230" x2="620" y2="230" stroke="#FFFFFF" stroke-width="1" />
+    <line x1="500" y1="235" x2="620" y2="235" stroke="#FFFFFF" stroke-width="1" />
+    <line x1="500" y1="240" x2="620" y2="240" stroke="#FFFFFF" stroke-width="1" />
+    <line x1="500" y1="245" x2="620" y2="245" stroke="#FFFFFF" stroke-width="1" />
+    <line x1="500" y1="250" x2="620" y2="250" stroke="#FFFFFF" stroke-width="1" />
+    <line x1="500" y1="255" x2="620" y2="255" stroke="#FFFFFF" stroke-width="1" />
+    <line x1="500" y1="260" x2="620" y2="260" stroke="#FFFFFF" stroke-width="1" />
+    <line x1="500" y1="265" x2="620" y2="265" stroke="#FFFFFF" stroke-width="1" />
+    <line x1="500" y1="270" x2="620" y2="270" stroke="#FFFFFF" stroke-width="1" />
+    <line x1="500" y1="275" x2="620" y2="275" stroke="#FFFFFF" stroke-width="1" />
+
+    <rect x="520" y="215" width="80" height="40" rx="4" fill="#2765FF" stroke="#1C4EB8" stroke-width="1" />
+    <text x="560" y="233" class="barrel-text">500,000</text>
+    <text x="560" y="248" class="barrel-text" font-size="12px">Barrels</text>
+
+    <!-- Text Labels -->
+    <text x="690" y="200" class="highlight" fill="#011E51">Partial</text>
+    <text x="690" y="220" class="highlight">25,000 배럴</text>
+    <text x="690" y="240" class="highlight" fill="#011E51">× 20개</text>
+    <line x1="630" y1="230" x2="660" y2="230" stroke="#727171" stroke-width="2" />
+
+    <text x="590" y="325" class="highlight">잘게 쪼개져 활발한 유동성</text>
+    <text x="590" y="345" class="desc">하루 수천 건 partial 거래 가능</text>
+
+    <!-- Source -->
+    <text x="760" y="405" class="source">자료: 코리아PDS</text>
+
+</svg>
