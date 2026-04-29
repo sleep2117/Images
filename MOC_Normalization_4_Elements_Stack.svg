@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="1000" height="400">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&amp;display=swap');
+            text { font-family: 'Nanum Gothic', sans-serif; text-anchor: middle; }
+            .title { font-size: 20px; font-weight: bold; fill: #000000; text-anchor: start; }
+            .layer-title-w { font-size: 18px; font-weight: bold; fill: #FFFFFF; }
+            .layer-title-b { font-size: 18px; font-weight: bold; fill: #011E51; }
+            .desc { font-size: 14px; fill: #727171; text-anchor: start; }
+            .desc-bold { font-size: 14px; font-weight: bold; fill: #F21B2D; text-anchor: start; }
+            .source { font-size: 12px; fill: #727171; text-anchor: end; }
+            .shadow { filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.1)); }
+            .shadow-light { filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.05)); }
+        </style>
+        <marker id="arrowUp" markerWidth="10" markerHeight="10" refX="5" refY="0" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,10 L5,0 L10,10 z" fill="#F21B2D" />
+        </marker>
+        <marker id="arrowRight" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L10,5 L0,10 z" fill="#727171" />
+        </marker>
+    </defs>
+    
+    <rect width="100%" height="100%" fill="#FFFFFF" />
+    <text x="40" y="40" class="title">Dated Brent 평가를 구성하는 4계층 구조 (4-Elements Stack)</text>
+
+    <!-- Upward arrow on the left to show synthesis direction -->
+    <line x1="80" y1="330" x2="80" y2="90" stroke="#F21B2D" stroke-width="4" marker-end="url(#arrowUp)" />
+    <!-- Rotate text for arrow -->
+    <g transform="translate(60, 210)">
+        <text x="0" y="0" font-size="16px" font-weight="bold" fill="#F21B2D" transform="rotate(-90)" text-anchor="middle">Dated Brent 산출 방향</text>
+    </g>
+
+    <!-- Layer 1 (Bottom) -->
+    <rect x="140" y="280" width="300" height="50" rx="6" fill="#F2E9DA" stroke="#BC9D7E" stroke-width="2" class="shadow-light" />
+    <text x="290" y="311" class="layer-title-b">1. Cash BFOET (월물 앵커)</text>
+    
+    <line x1="450" y1="305" x2="490" y2="305" stroke="#727171" stroke-width="2" marker-end="url(#arrowRight)" />
+    <text x="500" y="300" class="desc-bold">입력/기반 데이터:</text>
+    <text x="500" y="320" class="desc">선적 월만 확정된 선물/현도 시장 월단위 앵커</text>
+
+    <!-- Layer 2 -->
+    <rect x="140" y="215" width="300" height="50" rx="6" fill="#E8ECF5" stroke="#011E51" stroke-width="2" class="shadow-light" />
+    <text x="290" y="246" class="layer-title-b">2. CFD 주별 곡선 (주간 해상도)</text>
+
+    <line x1="450" y1="240" x2="490" y2="240" stroke="#727171" stroke-width="2" marker-end="url(#arrowRight)" />
+    <text x="500" y="235" class="desc-bold">입력/기반 데이터:</text>
+    <text x="500" y="255" class="desc">주간 단위 CFD Swap 스프레드 시세</text>
+
+    <!-- Layer 3 -->
+    <rect x="140" y="150" width="300" height="50" rx="6" fill="#BC9D7E" fill-opacity="0.2" stroke="#BC9D7E" stroke-width="2" class="shadow-light" />
+    <text x="290" y="181" class="layer-title-b">3. 품질 및 운임 조정 (정규화)</text>
+
+    <line x1="450" y1="175" x2="490" y2="175" stroke="#727171" stroke-width="2" marker-end="url(#arrowRight)" />
+    <text x="500" y="170" class="desc-bold">입력/기반 데이터:</text>
+    <text x="500" y="190" class="desc">유황분(INEOS), 개별 품질 프리미엄, 운임(Freight)</text>
+
+    <!-- Layer 4 (Top) -->
+    <rect x="140" y="85" width="300" height="50" rx="6" fill="#011E51" class="shadow" />
+    <text x="290" y="116" class="layer-title-w">4. MOC 실제 호가 (최종 평가)</text>
+
+    <line x1="450" y1="110" x2="490" y2="110" stroke="#727171" stroke-width="2" marker-end="url(#arrowRight)" />
+    <text x="500" y="105" class="desc-bold">입력/기반 데이터:</text>
+    <text x="500" y="125" class="desc">16:30 윈도우 내 실물 Bidding 및 Offering</text>
+
+    <!-- Floating Output -->
+    <rect x="60" y="45" width="460" height="30" fill="none" stroke="#F21B2D" stroke-width="2" stroke-dasharray="4,4" />
+    <text x="290" y="66" class="layer-title-b" fill="#F21B2D">최종 결과 = 하나의 "Dated Brent" 평가값</text>
+
+    <!-- Source -->
+    <text x="960" y="380" class="source">자료: 코리아PDS</text>
+</svg>
