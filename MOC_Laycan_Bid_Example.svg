@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&amp;display=swap');
+            text { font-family: 'Nanum Gothic', sans-serif; text-anchor: middle; }
+            .title { font-size: 20px; font-weight: bold; fill: #000000; text-anchor: start; }
+            .badge { font-size: 18px; font-weight: bold; fill: #FFFFFF; }
+            .company { font-size: 22px; font-weight: bold; fill: #011E51; }
+            .cal-month { font-size: 12px; font-weight: bold; fill: #FFFFFF; }
+            .cal-day { font-size: 22px; font-weight: bold; fill: #000000; }
+            .quote { font-size: 20px; font-weight: bold; fill: #F21B2D; }
+            .desc { font-size: 14px; fill: #727171; }
+            .source { font-size: 12px; fill: #727171; text-anchor: end; }
+            .shadow { filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1)); }
+        </style>
+    </defs>
+    
+    <rect width="100%" height="100%" fill="#FFFFFF" />
+    <text x="40" y="40" class="title">Bidding for a Cargo: Laycan 단위 호가 예시</text>
+
+    <!-- Company and Action -->
+    <rect x="270" y="75" width="160" height="40" rx="4" fill="#FFFFFF" stroke="#011E51" stroke-width="2" class="shadow" />
+    <text x="350" y="103" class="company">Trafigura</text>
+    
+    <rect x="440" y="75" width="80" height="40" rx="4" fill="#011E51" class="shadow" />
+    <text x="480" y="102" class="badge">BID</text>
+
+    <!-- Exact line -->
+    <rect x="120" y="210" width="560" height="50" rx="25" fill="#F2E9DA" stroke="#BC9D7E" stroke-width="2" />
+    <text x="400" y="242" class="quote">WTI Midland for May 10th-15th @ Dated + $2.20</text>
+
+    <!-- Calendars: May 10 ~ 15 (6 boxes) -->
+    <!-- Center of 6 boxes goes from X=195 to 605, width=410 -->
+    <!-- May 10 -->
+    <rect x="195" y="140" width="60" height="50" rx="4" fill="#FFFFFF" stroke="#727171" stroke-width="2" />
+    <path d="M 195 144 Q 195 140 199 140 L 251 140 Q 255 140 255 144 L 255 156 L 195 156 Z" fill="#727171" />
+    <text x="225" y="152" class="cal-month">May</text>
+    <text x="225" y="180" class="cal-day">10</text>
+    
+    <!-- May 11 -->
+    <rect x="265" y="140" width="60" height="50" rx="4" fill="#FFFFFF" stroke="#727171" stroke-width="2" />
+    <path d="M 265 144 Q 265 140 269 140 L 321 140 Q 325 140 325 144 L 325 156 L 265 156 Z" fill="#727171" />
+    <text x="295" y="152" class="cal-month">May</text>
+    <text x="295" y="180" class="cal-day">11</text>
+    
+    <!-- May 12 -->
+    <rect x="335" y="140" width="60" height="50" rx="4" fill="#FFFFFF" stroke="#727171" stroke-width="2" />
+    <path d="M 335 144 Q 335 140 339 140 L 391 140 Q 395 140 395 144 L 395 156 L 335 156 Z" fill="#727171" />
+    <text x="365" y="152" class="cal-month">May</text>
+    <text x="365" y="180" class="cal-day">12</text>
+    
+    <!-- May 13 -->
+    <rect x="405" y="140" width="60" height="50" rx="4" fill="#FFFFFF" stroke="#727171" stroke-width="2" />
+    <path d="M 405 144 Q 405 140 409 140 L 461 140 Q 465 140 465 144 L 465 156 L 405 156 Z" fill="#727171" />
+    <text x="435" y="152" class="cal-month">May</text>
+    <text x="435" y="180" class="cal-day">13</text>
+    
+    <!-- May 14 -->
+    <rect x="475" y="140" width="60" height="50" rx="4" fill="#FFFFFF" stroke="#727171" stroke-width="2" />
+    <path d="M 475 144 Q 475 140 479 140 L 531 140 Q 535 140 535 144 L 535 156 L 475 156 Z" fill="#727171" />
+    <text x="505" y="152" class="cal-month">May</text>
+    <text x="505" y="180" class="cal-day">14</text>
+
+    <!-- May 15 -->
+    <rect x="545" y="140" width="60" height="50" rx="4" fill="#FFFFFF" stroke="#727171" stroke-width="2" />
+    <path d="M 545 144 Q 545 140 549 140 L 601 140 Q 605 140 605 144 L 605 156 L 545 156 Z" fill="#727171" />
+    <text x="575" y="152" class="cal-month">May</text>
+    <text x="575" y="180" class="cal-day">15</text>
+
+    <!-- Brackets or box around it all to show it's one window -->
+    <rect x="185" y="130" width="430" height="70" fill="none" stroke="#F21B2D" stroke-width="2" stroke-dasharray="4,4" rx="4" />
+    
+    <text x="640" y="170" class="desc" text-anchor="start">선적 구간 특정</text>
+    
+    <line x1="625" y1="165" x2="635" y2="165" stroke="#727171" stroke-width="2" />
+
+    <text x="760" y="285" class="source">자료: 코리아PDS</text>
+</svg>
