@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&amp;display=swap');
+            text { font-family: 'Nanum Gothic', sans-serif; text-anchor: middle; }
+            .title { font-size: 24px; font-weight: bold; fill: #000000; text-anchor: start; }
+            .sec-title { font-size: 16px; font-weight: bold; fill: #011E51; }
+            .box-title { font-size: 14px; font-weight: bold; fill: #FFFFFF; }
+            .box-desc { font-size: 12px; fill: #FAFAFA; }
+            .timestamp { font-size: 12px; font-weight: bold; fill: #F21B2D; }
+            .bridge-label { font-size: 14px; font-weight: bold; fill: #011E51; }
+            .bridge-desc { font-size: 11px; fill: #727171; }
+            .source { font-size: 12px; fill: #727171; text-anchor: end; }
+            .shadow { filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.1)); }
+        </style>
+        <marker id="arrowBoth" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+            <path d="M0,0 L10,5 L0,10 Z" fill="#727171" />
+        </marker>
+        <marker id="arrowDown" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+            <path d="M0,0 L10,5 L0,10 Z" fill="#011E51" />
+        </marker>
+        <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+            <path d="M0,0 L10,5 L0,10 Z" fill="#F21B2D" />
+        </marker>
+    </defs>
+    
+    <rect width="100%" height="100%" fill="#F8F9FA" />
+    <text x="40" y="40" class="title">Brent 막후 구조도: 종이(거래소)에서 실물(선적항)까지 전체 조감도</text>
+
+    <!-- Background Sections -->
+    <rect x="30" y="80" width="220" height="510" fill="#FFFFFF" rx="8" stroke="#EFEFEF" stroke-width="2" class="shadow" />
+    <rect x="270" y="80" width="460" height="510" fill="#FFFFFF" rx="8" stroke="#EFEFEF" stroke-width="2" class="shadow" />
+    <rect x="750" y="80" width="220" height="510" fill="#FFFFFF" rx="8" stroke="#EFEFEF" stroke-width="2" class="shadow" />
+
+    <!-- 1. Left: Exchange (ICE) -->
+    <text x="140" y="115" class="sec-title">거래소 축 (ICE)</text>
+    <text x="140" y="135" class="timestamp">월물 기준 / 런던 19:30 정산</text>
+    
+    <rect x="50" y="160" width="180" height="200" fill="#011E51" rx="6" />
+    <text x="140" y="190" class="box-title">ICE Brent 선도곡선</text>
+    <text x="140" y="220" font-size="12px" fill="#FFFFFF">M1 (June)</text>
+    <text x="140" y="250" font-size="12px" fill="#FFFFFF">M2 (July)</text>
+    <text x="140" y="280" font-size="12px" fill="#FFFFFF">M3 (August)</text>
+    <text x="140" y="310" font-size="12px" fill="#FFFFFF">...</text>
+    <text x="140" y="340" class="box-desc">거대한 금융 및 헤지 유동성</text>
+    
+    <line x1="140" y1="360" x2="140" y2="430" stroke="#011E51" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowDown)" />
+    
+    <rect x="50" y="450" width="180" height="80" fill="#5A6D8F" rx="6" />
+    <text x="140" y="480" class="box-title">ICE Brent Index</text>
+    <text x="140" y="505" font-size="11px" fill="#FFFFFF">현금결제 시 사용되는 레이어</text>
+    <text x="140" y="520" font-size="11px" fill="#FFFFFF">(5개 평가 윈도우 교차 검증)</text>
+
+    <!-- 2. Middle: Platts MOC -->
+    <text x="500" y="115" class="sec-title">북해 실물 평가 축 (Platts MOC)</text>
+    <text x="500" y="135" class="timestamp">날짜물 기준 (10~30일 앞) / 런던 16:30 평가</text>
+
+    <!-- Papers on the physical side -->
+    <rect x="320" y="190" width="140" height="80" fill="#BC9D7E" rx="6" />
+    <text x="390" y="220" class="box-title">Cash BFOET</text>
+    <text x="390" y="240" font-size="11px" fill="#FFFFFF">월물 Base Forward</text>
+    <text x="390" y="255" font-size="11px" fill="#FFFFFF">(100k 배럴 부분 호가)</text>
+
+    <rect x="540" y="190" width="140" height="80" fill="#9BA7BB" rx="6" />
+    <text x="610" y="220" class="box-title">FWD Dated Brent</text>
+    <text x="610" y="245" font-size="11px" fill="#FFFFFF">선도 Dated Brent의</text>
+    <text x="610" y="260" font-size="11px" fill="#FFFFFF">주 단위 커브</text>
+
+    <!-- Center Dated Brent -->
+    <rect x="420" y="320" width="160" height="70" fill="#F21B2D" rx="6" stroke="#FFFFFF" stroke-width="2" class="shadow" />
+    <text x="500" y="352" font-size="20px" font-weight="bold" fill="#FFFFFF">Dated Brent</text>
+    <text x="500" y="375" font-size="12px" fill="#FFFFFF">단 하나의 실물 기준점</text>
+
+    <!-- Basket & Normalization (Bottom Middle) -->
+    <rect x="300" y="435" width="400" height="125" fill="#F2E9DA" rx="6" stroke="#D3C1AD" stroke-width="2" />
+    <text x="500" y="465" font-size="14px" font-weight="bold" fill="#011E51">실물 평가 바스켓 (BFOETM)</text>
+    <circle cx="360" cy="495" r="20" fill="#FFFFFF" stroke="#011E51" /><text x="360" y="499" font-size="10px">Brent</text>
+    <circle cx="410" cy="495" r="20" fill="#FFFFFF" stroke="#011E51" /><text x="410" y="499" font-size="10px">Forties</text>
+    <circle cx="460" cy="495" r="20" fill="#FFFFFF" stroke="#011E51" /><text x="460" y="499" font-size="10px">Oseberg</text>
+    <circle cx="510" cy="495" r="20" fill="#FFFFFF" stroke="#011E51" /><text x="510" y="499" font-size="10px">Ekofisk</text>
+    <circle cx="560" cy="495" r="20" fill="#FFFFFF" stroke="#011E51" /><text x="560" y="499" font-size="10px">Troll</text>
+    <circle cx="620" cy="495" r="25" fill="#FFFFFF" stroke="#F21B2D" stroke-width="2" /><text x="620" y="499" font-size="10px" font-weight="bold">WTI-M</text>
+    <text x="500" y="535" font-size="11px" fill="#727171">정규화 3대 요소: 품질(황/비중) · 운임율 변환(CIF to FOB)</text>
+    <text x="500" y="550" font-size="11px" fill="#727171">· WTI Midland 엑스트라 프리미엄</text>
+    
+    <!-- Arrow pointing up from Basket to Dated -->
+    <path d="M 500 435 L 500 390" fill="none" stroke="#F21B2D" stroke-width="4" marker-end="url(#arrowRed)" />
+
+    <!-- 3. Right: Participants -->
+    <text x="860" y="115" class="sec-title">시장 참여자 축</text>
+    <text x="860" y="135" class="timestamp">Maker vs Taker</text>
+
+    <!-- Price Makers -->
+    <rect x="780" y="170" width="160" height="150" fill="#FFFFFF" rx="6" stroke="#011E51" stroke-width="2" class="shadow" />
+    <text x="860" y="195" font-size="14px" font-weight="bold" fill="#011E51">Price Maker</text>
+    <text x="860" y="215" font-size="11px" fill="#727171">가격 제시 및 실물 연계</text>
+    <line x1="800" y1="225" x2="920" y2="225" stroke="#EFEFEF" />
+    <text x="860" y="245" font-size="12px" font-weight="bold" fill="#000000">Vitol, Shell, BP,</text>
+    <text x="860" y="265" font-size="12px" font-weight="bold" fill="#000000">Gunvor, Glencore,</text>
+    <text x="860" y="285" font-size="12px" font-weight="bold" fill="#000000">Mercuria 등 소수</text>
+
+    <!-- Price Takers -->
+    <rect x="780" y="400" width="160" height="150" fill="#FAFAFA" rx="6" stroke="#F21B2D" stroke-width="2" stroke-dasharray="4,4" class="shadow" />
+    <text x="860" y="425" font-size="14px" font-weight="bold" fill="#F21B2D">Price Taker</text>
+    <text x="860" y="445" font-size="11px" fill="#727171">가격 수용 및 헤지</text>
+    <line x1="800" y1="455" x2="920" y2="455" stroke="#EFEFEF" />
+    <text x="860" y="475" font-size="12px" font-weight="bold" fill="#000000">전 세계 수요 정제소,</text>
+    <text x="860" y="495" font-size="12px" font-weight="bold" fill="#000000">글로벌 상업 항공사,</text>
+    <text x="860" y="515" font-size="12px" font-weight="bold" fill="#000000">다수의 일반 투자자</text>
+
+    <!-- Bridges (The 4 Connections) -->
+    
+    <!-- 1. EFP (ICE <-> Cash BFOET) -->
+    <path d="M 220 220 Q 275 190 330 220" fill="none" stroke="#F21B2D" stroke-width="3" marker-end="url(#arrowBoth)" />
+    <rect x="205" y="170" width="140" height="45" fill="#F8F9FA" rx="4" opacity="0.9" />
+    <text x="275" y="190" class="bridge-label" fill="#F21B2D">EFP</text>
+    <text x="275" y="208" class="bridge-desc">선물을 실물(Cash)로 전환</text>
+
+    <!-- 2. CFD (Cash BFOET <-> Dated Brent) -->
+    <path d="M 400 270 L 460 320" fill="none" stroke="#BC9D7E" stroke-width="3" stroke-dasharray="4,4" marker-end="url(#arrowBoth)" />
+    <rect x="380" y="275" width="100" height="40" fill="#F8F9FA" rx="4" opacity="0.9" />
+    <text x="430" y="293" class="bridge-label">CFD</text>
+    <text x="430" y="308" class="bridge-desc">주간 Basis 변환</text>
+
+    <!-- 3. DFL (ICE <-> Dated Brent) -->
+    <path d="M 220 300 Q 320 400 420 360" fill="none" stroke="#011E51" stroke-width="3" stroke-dasharray="6,4" marker-end="url(#arrowBoth)" />
+    <rect x="240" y="325" width="120" height="40" fill="#F8F9FA" rx="4" opacity="0.9" />
+    <text x="300" y="342" class="bridge-label">DFL</text>
+    <text x="300" y="357" class="bridge-desc">종이-실물 직접 헤지</text>
+
+    <!-- Source -->
+    <text x="960" y="620" class="source">자료: 코리아PDS 자체 모델링 종합</text>
+</svg>
