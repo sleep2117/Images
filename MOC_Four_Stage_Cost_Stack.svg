@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="1000" height="450">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&amp;display=swap');
+            text { font-family: 'Nanum Gothic', sans-serif; text-anchor: middle; }
+            .title { font-size: 20px; font-weight: bold; fill: #000000; text-anchor: start; }
+            .bar-label { font-size: 14px; font-weight: bold; fill: #FFFFFF; }
+            .bar-desc { font-size: 13px; fill: #011E51; font-weight: bold; }
+            .gap-text { font-size: 13px; font-weight: bold; fill: #F21B2D; }
+            .source { font-size: 12px; fill: #727171; text-anchor: end; }
+            .shadow { filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.1)); }
+        </style>
+        <marker id="arrowUp" markerWidth="8" markerHeight="8" refX="4" refY="0" orient="auto">
+            <path d="M0,8 L4,0 L8,8 Z" fill="#F21B2D" />
+        </marker>
+    </defs>
+    
+    <rect width="100%" height="100%" fill="#FFFFFF" />
+    <text x="40" y="40" class="title">선물에서 정제소 도착가까지: 4단계 조달가 스택</text>
+
+    <!-- Base Line -->
+    <line x1="40" y1="320" x2="960" y2="320" stroke="#000000" stroke-width="2" />
+
+    <!-- Bar 1: ICE Brent -->
+    <rect x="60" y="200" width="140" height="120" fill="#9BA7BB" rx="4" class="shadow" />
+    <text x="130" y="260" class="bar-label">ICE Brent</text>
+    <text x="130" y="280" class="bar-label">선물</text>
+    <text x="130" y="340" class="bar-desc">① 스크린 유가</text>
+
+    <!-- Path 1: Gap -->
+    <line x1="200" y1="200" x2="280" y2="200" stroke="#727171" stroke-width="2" stroke-dasharray="4,4" />
+    <line x1="240" y1="200" x2="240" y2="165" stroke="#F21B2D" stroke-width="3" marker-end="url(#arrowUp)" />
+    <rect x="175" y="170" width="130" height="20" fill="#FFFFFF" rx="4" opacity="0.9" />
+    <text x="240" y="184" class="gap-text">+ 종이-실물 간극</text>
+    <text x="240" y="150" font-size="11px" fill="#727171">(Paper-Physical Gap)</text>
+
+    <!-- Bar 2: Dated Brent -->
+    <rect x="280" y="160" width="140" height="160" fill="#5A6D8F" rx="4" class="shadow" />
+    <text x="350" y="240" class="bar-label">Dated</text>
+    <text x="350" y="260" class="bar-label">Brent</text>
+    <text x="350" y="340" class="bar-desc">② 날짜물 기준가</text>
+
+    <!-- Path 2: Premium -->
+    <line x1="420" y1="160" x2="500" y2="160" stroke="#727171" stroke-width="2" stroke-dasharray="4,4" />
+    <line x1="460" y1="160" x2="460" y2="115" stroke="#F21B2D" stroke-width="3" marker-end="url(#arrowUp)" />
+    <rect x="395" y="125" width="130" height="20" fill="#FFFFFF" rx="4" opacity="0.9" />
+    <text x="460" y="139" class="gap-text">+ 화물 프리미엄</text>
+    <text x="460" y="100" font-size="11px" fill="#727171">(Physical Premium)</text>
+
+    <!-- Bar 3: FOB Outright -->
+    <rect x="500" y="110" width="140" height="210" fill="#011E51" rx="4" class="shadow" />
+    <text x="570" y="210" class="bar-label">FOB</text>
+    <text x="570" y="230" class="bar-label">Outright</text>
+    <text x="570" y="340" class="bar-desc">③ 선적지 확정가</text>
+
+    <!-- Path 3: Freight -->
+    <line x1="640" y1="110" x2="720" y2="110" stroke="#727171" stroke-width="2" stroke-dasharray="4,4" />
+    <line x1="680" y1="110" x2="680" y2="55" stroke="#F21B2D" stroke-width="3" marker-end="url(#arrowUp)" />
+    <rect x="620" y="70" width="120" height="20" fill="#FFFFFF" rx="4" opacity="0.9" />
+    <text x="680" y="84" class="gap-text">+ 화물 운송비</text>
+    <text x="680" y="40" font-size="11px" fill="#727171">(Freight to Asia)</text>
+
+    <!-- Bar 4: CIF Asia -->
+    <rect x="720" y="50" width="140" height="270" fill="#BC9D7E" rx="4" class="shadow" />
+    <text x="790" y="180" class="bar-label">CIF Asia</text>
+    <text x="790" y="340" class="bar-desc">④ 최종 도착 원가</text>
+
+    <!-- Note at bottom -->
+    <rect x="40" y="375" width="920" height="40" rx="6" fill="#FAFAFA" stroke="#EFEFEF" stroke-width="2" />
+    <text x="500" y="393" font-size="13px" font-weight="bold">※ 위 도식은 이해를 위한 원론적 스택 구조이며,</text>
+    <text x="500" y="409" font-size="13px" font-weight="bold">각 계단 사이의 간격 폭은 시장 수급에 따라 매일 크게 달라집니다.</text>
+
+    <!-- Source -->
+    <text x="960" y="440" class="source">자료: 코리아PDS</text>
+</svg>
