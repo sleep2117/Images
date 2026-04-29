@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&amp;display=swap');
+            text { font-family: 'Nanum Gothic', sans-serif; text-anchor: middle; }
+            .title { font-size: 20px; font-weight: bold; fill: #000000; text-anchor: start; }
+            .label-bold { font-size: 15px; font-weight: bold; fill: #000000; }
+            .desc { font-size: 14px; fill: #727171; }
+            .window-text { font-size: 16px; font-weight: bold; fill: #FFFFFF; }
+            .source { font-size: 12px; fill: #727171; text-anchor: end; }
+            .shadow { filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1)); }
+        </style>
+        <marker id="arrowRight" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L0,6 L9,3 z" fill="#011E51" />
+        </marker>
+    </defs>
+    
+    <rect width="100%" height="100%" fill="#FFFFFF" />
+    
+    <text x="40" y="40" class="title">North Sea Window 시간 구조: Dated Brent가 "날짜물"인 이유</text>
+    
+    <!-- Left Calendar (Assessment Date) -->
+    <rect x="80" y="100" width="100" height="100" rx="6" fill="#FAFAFA" stroke="#BC9D7E" stroke-width="2" class="shadow" />
+    <path d="M 80 106 Q 80 100 86 100 L 174 100 Q 180 100 180 106 L 180 125 L 80 125 Z" fill="#BC9D7E" />
+    <text x="130" y="118" font-size="14px" font-weight="bold" fill="#FFFFFF">평가일 (Today)</text>
+    <text x="130" y="160" font-size="28px" font-weight="bold" fill="#000000">14</text>
+    <text x="130" y="185" font-size="16px" font-weight="bold" fill="#727171">April</text>
+    
+    <!-- Arrow -->
+    <line x1="200" y1="150" x2="420" y2="150" stroke="#011E51" stroke-width="3" marker-end="url(#arrowRight)" />
+    <text x="310" y="130" class="label-bold" fill="#F21B2D">+ 10 ~ 30일 앞</text>
+    <text x="310" y="175" class="desc">평가일 기준 20일 구간의 창(Window) 제시</text>
+    
+    <!-- Right Window Box -->
+    <rect x="460" y="80" width="280" height="130" rx="8" fill="#F2E9DA" stroke="#BC9D7E" stroke-width="2" class="shadow" />
+    <rect x="460" y="80" width="280" height="35" rx="8" fill="#011E51" />
+    <path d="M 460 100 L 740 100 L 740 115 L 460 115 Z" fill="#011E51" /> <!-- remove bottom corners of header -->
+    
+    <text x="600" y="103" class="window-text">선적 가능 구간 (Delivery Laycan)</text>
+    
+    <text x="600" y="145" font-size="22px" font-weight="bold" fill="#F21B2D">April 24 ~ May 14</text>
+    
+    <rect x="490" y="170" width="220" height="24" rx="4" fill="#FFFFFF" />
+    <text x="600" y="187" font-size="14px" font-weight="bold" fill="#011E51">Trading crudes for delivery 10~30 days ahead</text>
+
+    <!-- Bottom summary box -->
+    <rect x="40" y="240" width="700" height="36" rx="8" fill="#FAFAFA" stroke="#EFEFEF" stroke-width="2" />
+    <text x="390" y="263" class="label-bold">월물(Monthly) 선물이 아닌, 구체적 날짜 구간이 찍힌 "날짜물(日付物)" 형태의 실물 화물 기준가격</text>
+
+    <!-- Source -->
+    <text x="760" y="290" class="source">자료: 코리아PDS</text>
+</svg>
