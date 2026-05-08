@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 540" width="1100" height="540">
+  <defs>
+    <style>
+      text { font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; }
+      .title { font-size: 26px; font-weight: 700; fill: #111827; }
+      .subtitle { font-size: 15px; fill: #4B5563; }
+      .box-title { font-size: 18px; font-weight: 700; fill: #111827; }
+      .box-body { font-size: 14px; fill: #374151; }
+      .white { fill: #FFFFFF; }
+      .stage { font-size: 14px; font-weight: 700; fill: #4B5563; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,8 L11,4 z" fill="#64748B"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,8 L11,4 z" fill="#F21B2D"/>
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <text x="50" y="52" class="title">한 척의 원유는 월물에서 날짜물로 이동합니다</text>
+  <text x="50" y="82" class="subtitle">처음에는 10만 배럴씩 잘라 거래되고, 선적 기간이 정해지면 Dated Brent 평가 대상이 됩니다.</text>
+
+  <rect x="70" y="145" width="275" height="155" rx="16" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+  <text x="207" y="185" text-anchor="middle" class="box-title">월 단위 실물 거래</text>
+  <text x="207" y="218" text-anchor="middle" class="box-body">예: 6월물 Cash BFOET-M</text>
+  <text x="207" y="246" text-anchor="middle" class="box-body">아직 정확한 선적일은 미정</text>
+  <text x="207" y="274" text-anchor="middle" class="box-body">10만 배럴씩 가격 발견</text>
+
+  <line x1="355" y1="222" x2="455" y2="222" stroke="#64748B" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="470" y="145" width="210" height="155" rx="16" fill="#FFF7ED" stroke="#F97316" stroke-width="2"/>
+  <text x="575" y="185" text-anchor="middle" class="box-title">선적 기간 통보</text>
+  <text x="575" y="220" text-anchor="middle" class="box-body">며칠부터 며칠 사이</text>
+  <text x="575" y="248" text-anchor="middle" class="box-body">어느 항구에서 실을지 확정</text>
+  <text x="575" y="276" text-anchor="middle" class="box-body">보통 선적 약 한 달 전</text>
+
+  <line x1="690" y1="222" x2="790" y2="222" stroke="#F21B2D" stroke-width="4" marker-end="url(#arrow-red)"/>
+
+  <rect x="805" y="145" width="245" height="155" rx="16" fill="#FEF2F2" stroke="#F21B2D" stroke-width="2"/>
+  <text x="927" y="185" text-anchor="middle" class="box-title">Dated 평가 대상</text>
+  <text x="927" y="218" text-anchor="middle" class="box-body">실제 선적 기간이 붙은 화물</text>
+  <text x="927" y="246" text-anchor="middle" class="box-body">평가일 기준 약 열흘 뒤부터</text>
+  <text x="927" y="274" text-anchor="middle" class="box-body">다음 달까지의 선적분</text>
+
+  <rect x="95" y="365" width="910" height="78" rx="16" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="130" y="397" class="stage">핵심</text>
+  <text x="130" y="425" class="box-body">Forward와 Dated는 서로 떨어진 두 시장이 아닙니다. 같은 화물이 시간표의 다른 지점에 놓인 것입니다.</text>
+
+  <line x1="190" y1="330" x2="920" y2="330" stroke="#CBD5E1" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="190" y="354" text-anchor="middle" class="stage">월물</text>
+  <text x="575" y="354" text-anchor="middle" class="stage">날짜 확정</text>
+  <text x="920" y="354" text-anchor="middle" class="stage">날짜물</text>
+</svg>
