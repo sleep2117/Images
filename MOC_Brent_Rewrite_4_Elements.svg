@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" width="1100" height="620">
+  <defs>
+    <style>
+      text { font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; }
+      .title { font-size: 26px; font-weight: 700; fill: #111827; }
+      .subtitle { font-size: 15px; fill: #4B5563; }
+      .box-title { font-size: 18px; font-weight: 700; fill: #111827; }
+      .box-body { font-size: 14px; fill: #374151; }
+      .num { font-size: 22px; font-weight: 700; fill: #FFFFFF; }
+      .white { fill: #FFFFFF; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,8 L11,4 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#F8FAFC"/>
+  <text x="50" y="52" class="title">Dated Brent는 네 가지 입력을 합쳐서 만듭니다</text>
+  <text x="50" y="82" class="subtitle">Dated보다 몇 달러 비싸고 싸다는 호가를 실제 달러 가격으로 바꾸기 위한 평가 엔진입니다.</text>
+
+  <g>
+    <rect x="95" y="135" width="410" height="92" rx="16" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+    <circle cx="135" cy="181" r="23" fill="#0F3A5F"/>
+    <text x="135" y="189" text-anchor="middle" class="num">1</text>
+    <text x="180" y="172" class="box-title">월 단위 실물 기준가격</text>
+    <text x="180" y="200" class="box-body">Cash BFOET-M. Dated 없이도 서 있는 출발점</text>
+  </g>
+
+  <g>
+    <rect x="595" y="135" width="410" height="92" rx="16" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+    <circle cx="635" cy="181" r="23" fill="#2563EB"/>
+    <text x="635" y="189" text-anchor="middle" class="num">2</text>
+    <text x="680" y="172" class="box-title">주 단위 가격 차이</text>
+    <text x="680" y="200" class="box-body">CFD. 월 단위 가격을 날짜물 가격표로 변환</text>
+  </g>
+
+  <g>
+    <rect x="95" y="275" width="410" height="92" rx="16" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+    <circle cx="135" cy="321" r="23" fill="#B45309"/>
+    <text x="135" y="329" text-anchor="middle" class="num">3</text>
+    <text x="180" y="312" class="box-title">등급과 조건 보정</text>
+    <text x="180" y="340" class="box-body">품질, 운임, 결제 시점 차이를 같은 기준선에 올림</text>
+  </g>
+
+  <g>
+    <rect x="595" y="275" width="410" height="92" rx="16" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+    <circle cx="635" cy="321" r="23" fill="#F21B2D"/>
+    <text x="635" y="329" text-anchor="middle" class="num">4</text>
+    <text x="680" y="312" class="box-title">MOC 종가 평가창</text>
+    <text x="680" y="340" class="box-body">16:30에 열린 매수·매도 호가와 체결 정보 반영</text>
+  </g>
+
+  <line x1="275" y1="395" x2="520" y2="460" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="825" y1="395" x2="580" y2="460" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="360" y="455" width="380" height="100" rx="18" fill="#F21B2D"/>
+  <text x="550" y="496" text-anchor="middle" font-size="23" font-weight="700" class="white">그날의 Dated Brent</text>
+  <text x="550" y="528" text-anchor="middle" font-size="15" class="white">바스켓 안에서 가장 경쟁적인 실물 기준가격</text>
+</svg>
