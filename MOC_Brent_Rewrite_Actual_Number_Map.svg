@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="760" viewBox="0 0 1120 760">
+  <defs>
+    <style>
+      .bg { fill: #f7f7f3; }
+      .title { font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 30px; font-weight: 700; fill: #202124; }
+      .sub { font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 16px; fill: #555; }
+      .label { font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 18px; font-weight: 700; fill: #202124; }
+      .small { font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 14px; fill: #555; }
+      .price { font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 26px; font-weight: 700; fill: #1f4f5f; }
+      .note { font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 15px; fill: #404040; }
+      .card { fill: #ffffff; stroke: #c9c7bd; stroke-width: 1.5; rx: 8; }
+      .accent { fill: #e8f0ef; stroke: #9fb9b5; stroke-width: 1.5; rx: 8; }
+      .cargo { fill: #fff6e7; stroke: #d9b46f; stroke-width: 1.5; rx: 8; }
+      .gap { fill: #f1ebe2; stroke: #c7a86f; stroke-width: 1.2; rx: 6; }
+      .arrow { stroke: #6d6a61; stroke-width: 2.2; fill: none; marker-end: url(#arrow); }
+      .dash { stroke: #b9b3a6; stroke-width: 1.4; stroke-dasharray: 6 6; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#6d6a61"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1120" height="760"/>
+
+  <text class="title" x="60" y="54">2026년 4월 24일 Brent 가격층</text>
+  <text class="sub" x="60" y="84">BFO DTD는 이 엑셀에서 실제 Dated Brent 현물 평가값으로 쓰는 항목입니다.</text>
+
+  <rect class="card" x="60" y="125" width="220" height="128"/>
+  <text class="label" x="86" y="162">선물 화면</text>
+  <text class="price" x="86" y="200">$105.33</text>
+  <text class="small" x="86" y="228">ICE Brent Futures M1</text>
+
+  <rect class="card" x="330" y="125" width="220" height="128"/>
+  <text class="label" x="356" y="162">월 단위 Brent</text>
+  <text class="price" x="356" y="200">$104.09</text>
+  <text class="small" x="356" y="228">Brent Swap M0</text>
+
+  <rect class="accent" x="600" y="125" width="220" height="128"/>
+  <text class="label" x="626" y="162">날짜물 기준선</text>
+  <text class="price" x="626" y="200">$109.96</text>
+  <text class="small" x="626" y="228">Dated Swap M0</text>
+
+  <rect class="accent" x="870" y="125" width="190" height="128"/>
+  <text class="label" x="896" y="162">Dated 현물값</text>
+  <text class="price" x="896" y="200">$112.37</text>
+  <text class="small" x="896" y="228">North Sea Cash BFO DTD</text>
+
+  <path class="arrow" d="M282 189 H322"/>
+  <path class="arrow" d="M552 189 H592"/>
+  <path class="arrow" d="M822 189 H862"/>
+
+  <rect class="gap" x="600" y="282" width="220" height="76"/>
+  <text class="note" x="626" y="309">종이 Brent와 Dated</text>
+  <text class="label" x="626" y="337">+$5.87</text>
+
+  <rect class="gap" x="840" y="282" width="220" height="76"/>
+  <text class="note" x="861" y="309">선물과 Dated 현물</text>
+  <text class="label" x="861" y="337">+$7.04</text>
+
+  <line class="dash" x1="170" y1="253" x2="170" y2="420"/>
+  <line class="dash" x1="710" y1="253" x2="710" y2="420"/>
+  <line class="dash" x1="965" y1="253" x2="965" y2="420"/>
+
+  <text class="label" x="60" y="405">Dated는 끝이 아니라 기준선입니다</text>
+  <text class="sub" x="60" y="433">실제 카고 가격은 이 기준선 위에 등급별 품질, 수급, 선적 조건이 다시 붙습니다.</text>
+
+  <rect class="gap" x="430" y="470" width="260" height="54"/>
+  <text class="note" x="460" y="503">등급별 실물 차등이 다시 붙음</text>
+
+  <path class="arrow" d="M560 524 V560"/>
+  <path class="arrow" d="M520 524 C450 545 330 552 240 570"/>
+  <path class="arrow" d="M600 524 C670 545 790 552 885 570"/>
+
+  <rect class="cargo" x="110" y="585" width="250" height="112"/>
+  <text class="label" x="138" y="622">Forties</text>
+  <text class="price" x="138" y="660">$124.73</text>
+  <text class="small" x="138" y="683">개별 등급 현물 가격</text>
+
+  <rect class="cargo" x="435" y="585" width="250" height="112"/>
+  <text class="label" x="463" y="622">Oseberg</text>
+  <text class="price" x="463" y="660">$137.48</text>
+  <text class="small" x="463" y="683">품질과 수급 차등 반영</text>
+
+  <rect class="cargo" x="760" y="585" width="250" height="112"/>
+  <text class="label" x="788" y="622">Troll</text>
+  <text class="price" x="788" y="660">$138.03</text>
+  <text class="small" x="788" y="683">Dated 위에 프리미엄이 붙은 값</text>
+
+  <path class="arrow" d="M965 253 C990 266 1084 260 1084 382 C1000 426 724 444 560 470"/>
+
+  <rect class="card" x="60" y="718" width="1000" height="32"/>
+  <text class="note" x="82" y="739">읽는 순서: ICE 선물 화면 → 월 단위 Brent → Dated 파생가격 → BFO DTD Dated 현물값 → 개별 등급·카고 가격</text>
+</svg>
